@@ -42,7 +42,9 @@ body {
     height: 72px;
     width: 240px;
     background: url(icons/Go.svg) no-repeat 90% 50%;
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    transition: transform 0.2s ease-out,
+                box-shadow 0.2s ease-out,
+                background-position 0.1s ease-in-out;
     display: flex;
     align-items: center;
 }
@@ -51,10 +53,13 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 16px;
+    padding: 10px 0;
     margin-left: 24px;
     margin-right: 24px;
 
+    max-height: 164px;
     overflow: hidden;
+    transition: max-height 0.25s ease-in-out;
 }
 
 .services-button:hover {
@@ -64,6 +69,7 @@ body {
 
 .services-button:active {
     border: 1px solid #FF3E79;
+    background-position: 95% 50%;
 }
 
 .services-button__img {
@@ -112,6 +118,7 @@ body {
     font-size: 16px;
     font-family: inherit;
     text-transform: uppercase;
+    color: #7E7E7E;
     padding-left: 24px;
     height: 56px;
     margin: 0;
@@ -142,10 +149,11 @@ body {
 .expand-icon {
     margin-right: 10px;
     height: 14px;
+    transition: transform 0.3s linear;
 }
 
 .expand-button__text {
-    font-family: inherit;
+    font-family: 'TT Lakes';
     font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.4px;
@@ -157,6 +165,7 @@ body {
 
 .services__expand-button:active {
     border: 1px solid rgba(0, 0, 0, 0.3);
+    font-weight: 900;
     transform: scale(0.95);
 }
 
