@@ -76,6 +76,8 @@ body {
 .mySwiper {
     max-height: 164px;
     transition: max-height 0.25s ease-in-out;
+    padding-left: 24px !important;
+    
 }
 
 
